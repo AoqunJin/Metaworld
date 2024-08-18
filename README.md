@@ -22,7 +22,28 @@ __Table of Contents__
 ## Join the Community
 Metaworld is now maintained by the Farama Foundation! You can interact with our community and the new developers in our [discoed server](https://discord.gg/PfR7a79FpQ) 
 ## Installation
-Meta-World is based on MuJoCo, which has a proprietary dependency we can't set up for you. Please follow the [instructions](https://github.com/openai/mujoco-py#install-mujoco) in the mujoco-py package for help. Once you're ready to install everything, run:
+Meta-World is based on MuJoCo, which has a proprietary dependency we can't set up for you. Please follow the [instructions](https://github.com/openai/mujoco-py#install-mujoco) in the mujoco-py package for help. 
+### Install Mujoco
+``` bash
+wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
+mkdir -p ~/.mujoco/mujoco210
+tar -xzvf ./mujoco210-linux-x86_64.tar.gz -C ~/.mujoco
+```
+
+Add this to `.bashrc`:
+
+``` bash
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/$USER/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+```
+You can avoid error when compiling the cython file with:
+
+``` bash
+apt-get install libghc-x11-dev libglew-dev patchelf
+pip install Cython==3.0.0a10
+```
+
+Once you're ready to install everything, run:
 
 ```
 pip install git+https://github.com/rlworkgroup/metaworld.git@master#egg=metaworld
