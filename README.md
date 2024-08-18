@@ -43,16 +43,17 @@ apt-get install libghc-x11-dev libglew-dev patchelf
 pip install Cython==3.0.0a10
 ```
 
+### Install Meta-World
 Once you're ready to install everything, run:
 
 ```
-pip install git+https://github.com/rlworkgroup/metaworld.git@master#egg=metaworld
+pip install git+https://github.com/AoqunJin/Metaworld.git
 ```
 
 Alternatively, you can clone the repository and install an editable version locally:
 
 ```
-git clone https://github.com/rlworkgroup/metaworld.git
+git clone https://github.com/AoqunJin/Metaworld.git
 cd metaworld
 pip install -e .
 ```
