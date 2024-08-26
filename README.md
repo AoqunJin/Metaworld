@@ -39,7 +39,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 You can avoid error when compiling the cython file with:
 
 ``` bash
-apt-get install libghc-x11-dev libglew-dev patchelf
+apt-get install libghc-x11-dev libglew-dev patchelf libosmesa6-dev libgl1-mesa-glx libglfw3
 pip install Cython==3.0.0a10
 ```
 
